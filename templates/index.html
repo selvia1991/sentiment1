@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Review Sentiment Analysis</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='icon.ico') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    
+    <div class="container">
+        <h2 class='container-heading'><span><strong>😀Hotel Review </strong> </span> Sentiment analysis😑</h2>
+    </div>
+    <div class="ml-container">
+        <br><br><br><br>
+        <form action="{{ url_for('predict') }}" method="POST">
+            <input type="text" name="review" class="input"  placeholder="Enter Your Review Here..." autocomplete="off" required >
+            <br>
+            <br>
+            <input type="submit" class="my-cta-button" value="Predict">
+        </form>
+    </div>
+    <div class='footer'>
+        <div class="contact">
+            <a target="_blank" href=""><i class="fab fa-github fa-lg contact-icon"></i></a>
+            <a target="_blank" href=""><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+        </div>
+        <p class='footer-description'>Made with ❤️ by Abhayparashar31👋</p>
+    </div>
+</body>
+</html>
