@@ -7,9 +7,14 @@ from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 import pickle
 
+import numpy as np
+import tensorflow as tf
+from tensorflow import keras
+
 ###Loading model and cv
-cv = pickle.load(open('cv.pkl','rb'))
-model = pickle.load(open('review.pkl','rb'))
+# cv = pickle.load(open('cv.pkl','rb'))
+# model = pickle.load(open('review.pkl','rb'))
+model = keras.models.load_model ("model.h5")
 
 app = Flask(__name__)
 
