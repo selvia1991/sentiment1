@@ -12,7 +12,7 @@ import tensorflow as tf
 from tensorflow import keras
 
 ###Loading model and cv
-model = keras.models.load_model ("model.h5")
+#model = keras.models.load_model ("model.h5")
 
 app = Flask(__name__)
 
