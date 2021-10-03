@@ -83,12 +83,9 @@ def predict():
         
 
         y_pred_otherData = model.predict(X_otherData)
-        otherData['Result Prediction'] = y_pred_otherData
+       
 
-        polarity_decode = {0 : 'Negative', 1 : 'Neutral', 2 : 'Positive'}
-        otherData['Result Prediction'] = otherData['Result Prediction'].map(polarity_decode)
-
-        return render_template('result.html',prediction=otherData['Result Prediction'])
+        return render_template('result.html',prediction=y_pred_otherData)
 
 if __name__ == "__main__":
     app.run(debug=True)    
